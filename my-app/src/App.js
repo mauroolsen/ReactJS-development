@@ -1,23 +1,23 @@
-import "./App.scss";
 import React from "react";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        This is my component:
+        <HelloWorld text="Hola mundo" subtitle="Español" />
+        <HelloWorld text="Hello world" subtitle="English" />
+      </div>
+    );
+  }
+}
+
+class HelloWorld extends React.Component{
+  render(){
+    return(
+      <div className="hello">
+        <h1>{this.props.text}</h1>
+        <h4>{this.props.subtitle}</h4>
       </div>
     );
   }
