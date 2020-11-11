@@ -1,0 +1,19 @@
+.card{
+  border: none;
+  border-radius: 5px;
+  background-color: #56AAD6;
+  margin: 20px;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .header{
+    background-color: #EAF4FA;
+    border-radius: 3px;
+    border: none;
+  }
+  .body{
+    background-color: #EAF4FA;
+    border-radius: 3px;
+    border: none;
+  }
+}

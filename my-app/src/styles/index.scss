@@ -1,5 +1,7 @@
 
 @import './HelloWorld.scss';
+@import './Task.scss';
+
 
 body {
   margin: 0;
@@ -13,6 +15,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .text_center{

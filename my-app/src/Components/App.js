@@ -1,13 +1,12 @@
 import React from "react";
 
-import HelloWorld from './HelloWorld';
+import Task from './Task';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <HelloWorld subtitle="Español" />
-        <HelloWorld subtitle="English" />
+        <Task title="titulo" text="body"/>
       </div>
     );
   }
