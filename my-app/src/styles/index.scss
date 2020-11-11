@@ -14,3 +14,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text_center{
+  text-align: center;
+  margin: auto;
+}
+
+.btn{
+  background-color: #BA4F09;
+  border: none;
+  color: white;
+  padding: 10px;
+  &:hover{
+    background-color: #C36528;
+  }
+  &:active{
+    background-color: #CB7B47;
+  }
+}
+
+
