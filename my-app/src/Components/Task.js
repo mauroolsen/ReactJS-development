@@ -2,19 +2,17 @@ import React from 'react';
 
 class Task extends React.Component{
   constructor(props){
-    super(props);
+    super(props)
   }
+
   render(){
     return(
-      <div className="card">
-          <div className="header">
-            <h1>{this.props.title}</h1>
-          </div>
-          <div className="body">
-            <p>{this.props.text}</p>
-          </div>
+      <div>
+        <h1>Tarea: {this.props.task.id}</h1>
+        <h3>{this.props.task.title}</h3>
+        <p>{this.props.task.description}</p>
       </div>
-    )
+    );
   }
 }
 
