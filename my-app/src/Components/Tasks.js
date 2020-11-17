@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 import Task from './Task';
 
@@ -16,6 +18,10 @@ class Tasks extends React.Component{
       </div>
     );
   }
+}
+
+Tasks.propTypes = {
+  tasks: PropTypes.array.isRequired
 }
 
 export default Tasks;

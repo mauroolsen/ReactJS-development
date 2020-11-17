@@ -10,20 +10,16 @@ class App extends React.Component {
     tasks: tasks
   };
 
-  addTask(task){
-    this.state.tasks.push(task);
+  onSubmit = (e) =>{
+    console.log(e.target.title.value, e.target.description.value);
+    e.preventDefault();
   }
 
   render() {
     return (
       <div className="App">
-        <FormTask />
+        <FormTask onSubmit={this.onSubmit}/>
         <Tasks tasks = {this.state.tasks} />
-        {this.addTask({
-          "id": 4,
-          "title": "tarea tres",
-          "description": "description"
-        })}
       </div>
     );
   }
