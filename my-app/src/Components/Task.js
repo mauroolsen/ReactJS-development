@@ -7,9 +7,9 @@ class Task extends React.Component{
     const {task} = this.props;
     return(
       <div>
-        <h1>Tarea: {task.id}</h1>
-        <h3>{task.title}</h3>
-        <p>{task.description}</p>
+        <p>
+          Tarea: {task.id} - {task.title} -{task.description}
+        </p>
       </div>
     );
   }
