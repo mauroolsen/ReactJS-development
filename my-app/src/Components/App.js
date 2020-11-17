@@ -10,17 +10,19 @@ class App extends React.Component {
     tasks: tasks
   };
 
+  // Resultado de FormTask
   onSubmit = (task) =>{
     this.addTask(task);
   }
 
+  // Agregando task a state
   addTask(task){
     task={
       ...task,
       id: this.state.tasks.length
     }
     this.setState({
-      tasks: [...this.state.tasks, task]
+      tasks: [...this.state.tasks, task] 
     });
   }
 

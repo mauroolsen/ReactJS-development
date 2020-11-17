@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class FormTask extends Component{
 
+  //Manipulando resultado de form
   onSubmit = (e)=>{
     const {onSubmit} = this.props;
     let task = {
@@ -26,6 +27,7 @@ export default class FormTask extends Component{
   }
 }
 
+// Definiendo tipado de propiedad
 FormTask.propTypes = {
   onSubmit: PropTypes.func.isRequired
 }

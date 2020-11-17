@@ -16,6 +16,7 @@ class Task extends React.Component{
   
 }
 
+// Definiendo tipado de propiedad
 Task.propTypes = {
   task: PropTypes.object.isRequired
 }

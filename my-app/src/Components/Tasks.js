@@ -20,6 +20,7 @@ class Tasks extends React.Component{
   }
 }
 
+// Definiendo tipado de propiedad
 Tasks.propTypes = {
   tasks: PropTypes.array.isRequired
 }
