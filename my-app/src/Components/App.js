@@ -10,11 +10,20 @@ class App extends React.Component {
     tasks: tasks
   };
 
+  addTask(task){
+    this.state.tasks.push(task);
+  }
+
   render() {
     return (
       <div className="App">
         <FormTask />
         <Tasks tasks = {this.state.tasks} />
+        {this.addTask({
+          "id": 4,
+          "title": "tarea tres",
+          "description": "description"
+        })}
       </div>
     );
   }
