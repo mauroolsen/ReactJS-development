@@ -10,7 +10,7 @@ class Tasks extends React.Component{
       <div>
         {this.props.tasks.map((e)=>{
           return(
-            <Task task = {e}/>
+            <Task task = {e} key={e.id}/>
           );
         })}
       </div>
