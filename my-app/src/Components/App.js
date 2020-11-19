@@ -1,14 +1,17 @@
 import React from "react";
 
-import tasks from './sample/tasks.json';
+import tasksRep from './sample/tasks.json';
 
 import Tasks from './Tasks';
 import FormTask from './FormTask';
 class App extends React.Component {
 
-  state = {
-    tasks: tasks
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      tasks: tasksRep
+    };
+  }
 
   // Resultado de FormTask
   onSubmit = (task) =>{
@@ -16,14 +19,15 @@ class App extends React.Component {
   }
 
   // Agregando task a state
-  addTask(task){
-    task={
-      ...task,
-      id: this.state.tasks.length
-    }
+  addTask = (task) => {
+    task={id: this.state.tasks.length, ...task}
     this.setState({
-      tasks: [...this.state.tasks, task] 
-    });
+      tasks: [...this.state.tasks, task]
+    }, this.save);
+  }
+
+  save = () =>{
+    //tasksRep = this.state.tasks;
   }
 
   render() {

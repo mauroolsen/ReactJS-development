@@ -2,17 +2,20 @@
   {
     "id": 0,
     "title": "tarea uno",
-    "description": "description"
+    "description": "description",
+    "done": false
   },
   {
     "id": 1,
     "title": "tarea dos",
-    "description": "description"
+    "description": "description",
+    "done": true
   },
   {
     "id": 2,
     "title": "tarea tres",
-    "description": "description"
+    "description": "description",
+    "done": true
   }
   
 ]
