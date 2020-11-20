@@ -12,7 +12,12 @@ class Tasks extends React.Component{
       <div>
         {this.props.tasks.map((e)=>{
           return(
-            <Task task = {e} key={e.id}/>
+            <Task 
+              task = {e} 
+              key={e.id}
+              deleteTask = {this.props.deleteTask}
+              checkDone = {this.props.checkDone}
+            />
           );
         })}
       </div>
@@ -22,7 +27,9 @@ class Tasks extends React.Component{
 
 // Definiendo tipado de propiedad
 Tasks.propTypes = {
-  tasks: PropTypes.array.isRequired
+  tasks: PropTypes.array.isRequired,
+  deleteTask: PropTypes.func.isRequired,
+  checkDone: PropTypes.func.isRequired
 }
 
 export default Tasks;

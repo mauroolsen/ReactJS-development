@@ -20,10 +20,32 @@ class App extends React.Component {
 
   // Agregando task a state
   addTask = (task) => {
-    task={id: this.state.tasks.length, ...task}
+    task={
+      id: this.state.tasks.length, 
+      ...task,
+       done: false
+    }
     this.setState({
       tasks: [...this.state.tasks, task]
     }, this.save);
+  }
+
+  checkDone = (id) => {
+    const newTasks = this.state.tasks.map(task =>{
+      if(task.id === id){
+        task.done = !task.done;
+      }
+      return task;
+    });
+    this.setState({
+      tasks: newTasks
+    });
+  }
+
+  deleteTask = (id)=>{
+    this.setState({
+      tasks: this.state.tasks.filter(task => task.id !== id)
+    });
   }
 
   save = () =>{
@@ -34,7 +56,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <FormTask onSubmit={this.onSubmit}/>
-        <Tasks tasks = {this.state.tasks} />
+        <Tasks 
+          tasks = {this.state.tasks} 
+          deleteTask = {this.deleteTask}
+          checkDone = {this.checkDone}
+        />
       </div>
     );
   }
